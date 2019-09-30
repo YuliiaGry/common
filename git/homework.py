@@ -19,12 +19,8 @@ def is_two_object_has_same_value(a, b) -> bool:
     If @first and @second has same value should return True
     In another case should return False
     """
-    if a == b:
-        c = True
-    else:
-        c = False
-    return c
-    pass
+    return a==b
+
 
 
 def is_two_objects_has_same_type(a, b) -> bool:
@@ -32,12 +28,8 @@ def is_two_objects_has_same_type(a, b) -> bool:
     If @first and @second has same type should return True
     In another case should return False
     """
-    if type(a) == type(b):
-        c = True
-    else:
-        c = False
-    return c
-    pass
+    return type(a) == type(b)
+
 
 
 def is_two_objects_is_the_same_objects(a, b) -> bool:
@@ -45,12 +37,7 @@ def is_two_objects_is_the_same_objects(a, b) -> bool:
     If @first and @second has same type should return True
     In another case should return False
     """
-    if a is b:
-        c = True
-    else:
-        c = False
-    return c
-    pass
+    return a is b
 
 
 def multiple_ints(a, b) -> int:
@@ -74,7 +61,7 @@ def multiple_ints(a, b) -> int:
     else:
         raise ValueError('At least one element is not integer')
     return c
-    pass
+
 
 
 def multiple_ints_with_conversion(a, b) -> int:
@@ -106,13 +93,12 @@ def multiple_ints_with_conversion(a, b) -> int:
             print("Not valid input data")
 
     """
-    d = 2
-    if type(int(a)) == type(d) and type(int(b)) == type(d):
+    if type(int(a)) == int and type(int(b)) == int:
         c = int(a) * int(b)
     else:
         raise ValueError('Not valid input data')
     return c
-    pass
+
 
 
 
@@ -132,11 +118,7 @@ def is_word_in_text(what_word, where_word) -> bool:
        '' >>> False
 
     """
-    if where_word.find(what_word) != -1:
-        c = True
-    else:
-        c = False
-    return c
+    return where_word.find(what_word) != -1
 
 
 def some_loop_exercise() -> list:
@@ -203,4 +185,4 @@ def simple_sort(ls_1) -> List[list]:
         b = ls_1.index(min(ls_1))
         del ls_1[b]
     return ls_2
-    pass
+
