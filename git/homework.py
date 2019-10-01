@@ -54,9 +54,7 @@ def multiple_ints(a, b) -> int:
     Returns:
         Product of elements
     """
-    d = 2
-    d = type(d)
-    if type(a) == d and type(b) == d:
+    if type(a) == int and type(b) == int:
         c = a * b
     else:
         raise ValueError('At least one element is not integer')
