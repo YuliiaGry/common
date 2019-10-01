@@ -62,7 +62,9 @@ def multiple_ints(a, b) -> int:
 
 
 
+
 def multiple_ints_with_conversion(a, b) -> int:
+
     """
     If possible to convert arguments to int value - convert and multiply them.
     If it is impossible raise ValueError
@@ -91,11 +93,13 @@ def multiple_ints_with_conversion(a, b) -> int:
             print("Not valid input data")
 
     """
-    if type(int(a)) == int and type(int(b)) == int:
-        c = int(a) * int(b)
-    else:
-        raise ValueError('Not valid input data')
-    return c
+
+    try:
+        type(int(a)) == int and type(int(b)) == int
+    except ValueError:
+        print("Not valid input data")
+    return int(a) * int(b)
+  
 
 
 
